@@ -1,0 +1,776 @@
+
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+    @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+    @font-face {
+        font-family: Mamelon;
+        src: url(./font/Mamelon.otf)
+    }
+     @font-face {
+        font-family: wt011;
+        src: url(./font/wt011.ttf)}
+         @font-face {
+        font-family: wt014;
+        src: url(./font/wt014.ttf)}
+         @font-face {
+        font-family: cwTeXYen;
+        src: url(./font/cwTeXYen-zhonly.ttf)}
+        @font-face{font-family: cute1;
+        src: url(./font/清松手寫體1.ttf)
+        }
+          @font-face{font-family: cute2;
+        src: url(./font/清松手寫體3.ttf)
+        }
+
+
+    html {
+        height: 100%
+    }
+
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-image:url(./img/bgc.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+    }
+    table{  font-family: 'wt011';   color: rgb(179, 203, 195);}
+    table th{background: rgb(216, 216, 216)}
+h2, p{ font-family: 'wt011';
+font-weight: 800;
+color: rgb(5,173,122);
+margin: 1vh 0 1vh 0;
+padding-bottom: 1vh;
+}
+
+/* 首頁區 */
+    #bg-video {
+        position: fixed;
+        width: 50vw;
+        margin-left: 10vw;
+        margin-top: 22vh;
+        z-index: -99;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+    }
+#draggable {width:18vw; padding: 0.5em;bottom:20vh; left:80vw;
+background: transparent;border: none;cursor: pointer;
+}
+#draggable img:hover {transform: rotateY(180deg)}
+#draggable img
+{
+width:5vw;
+}
+.shizue{
+padding:0 10px 0 10px ;
+position: absolute;
+border: 1px solid #555;
+border-radius: 10px;
+width:fit-content;
+height: 5vh;
+background-color: rgb(223, 222, 181);
+left: 30%;
+top:10%;
+font-family: 'cute2';
+font-size: 3vh;
+}
+@media all and (max-width: 480px){
+    #draggable {display: none}
+
+}
+
+    .title1,
+    .title2,
+    .title3,
+    .title4,
+    .title5,
+    .title6,
+    .title7,
+    .title8 {
+        font-size: 8vh;
+        color: white;
+        width: 6vw;
+        height: 10vh;
+        margin-top: 4vh;
+        padding: 0;
+        font-family: Mamelon;
+    }
+
+    .title1 {
+        background-image: linear-gradient(110deg, rgb(0, 177, 171) 20%, rgb(0, 119, 111) 28%, rgb(0, 119, 111) 40%, rgb(0, 182, 176) 60%, rgb(0, 182, 176),rgb(0, 119, 111)84%,rgb(0, 182, 176)95%);
+        margin-left: 10vw;
+    }
+
+    .title2 {
+        background: linear-gradient(5deg, rgb(254, 116, 25)5%, rgb(254, 116, 25)20%, rgb(255, 60, 0)25%, rgb(254, 116, 25)41%, rgb(255, 60, 0)48%, rgb(254, 116, 25)65%, rgb(255, 60, 0)92%, rgb(254, 116, 25)100%);
+    }
+
+    .title3 {
+        background-color: rgb(0, 159, 92);
+        border-radius: 100%;
+        position: relative;
+    }
+
+    .title3:before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        left: 25%;
+        background: rgb(0, 159, 92);
+        z-index: -20;
+        border-radius: 100%;
+        width: 48px;
+        height: 48px;
+    }
+
+    .title3:after {
+        content: "";
+        position: absolute;
+        top: -8%;
+        left: 5%;
+        background: rgb(0, 159, 92);
+        z-index: -20;
+        border-radius: 100%;
+        width: 48px;
+        height: 48px;
+    }
+
+    .title3-copy {
+        background: rgb(0, 159, 92);
+        color: white;
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        font-family: Mamelon;
+        border-radius: 100%;
+        position: relative;
+        z-index: -1;
+        top: -90%;
+        left: 45%;
+    }
+
+    .title3-copy::before {
+        content: "";
+        position: absolute;
+        top: 95%;
+        right: 40%;
+        background: rgb(168,90,0);
+        z-index: -20;
+        width: 48px;
+        height: 48px;
+    }
+
+    .title4 {
+        background: radial-gradient(ellipse at 50% 80%, rgb(230, 15, 94)0%, rgb(230, 15, 94)16%, rgb(254, 82, 140)16%, rgb(254, 82, 140)36%, rgb(230, 15, 94)36%, rgb(230, 15, 94)58%, rgb(254, 82, 140)58%, rgb(254, 82, 140)77%, rgb(230, 15, 94)77%, rgb(230, 15, 94)100%, transparent) -30px -70px;
+    }
+
+    .title5 {
+        background: linear-gradient(-5deg, rgb(2, 168, 254)0%, rgb(2, 168, 254)15%, rgb(0, 137, 235)20%, rgb(0, 137, 235)35%, rgb(2, 168, 254)40%, rgb(2, 168, 254)55%, rgb(0, 137, 235)60%, rgb(0, 137, 235)75%, rgb(2, 168, 254)80%, rgb(2, 168, 254)95%, rgb(0, 137, 235)100%);
+    }
+    .title6{
+        background: linear-gradient(-125deg,rgb(156, 13, 212)0%, rgb(156, 13, 212)19%,rgb(198, 90, 241)45%,rgb(156, 13, 212)50%,rgb(156, 13, 212)58%,rgb(198, 90, 241)60%,rgb(198, 90, 241)63%,rgb(156, 13, 212)72%,rgb(156, 13, 212)82%,rgb(198, 90, 241)85%,rgb(198, 90, 241)100%)
+    }
+
+.title7{  background: linear-gradient(135deg,rgb(231, 180, 11)0%,rgb(231, 180, 11)25%,rgb(182, 124, 0)25%,rgb(182, 124, 0)40%,rgb(231, 180, 11)60%,rgb(231, 180, 11)75%,rgb(182, 124, 0)75%,rgb(182, 124, 0)100%)}
+
+.title8{ background: radial-gradient(ellipse at 80% 90%,rgb(200,200,200)10%,rgb(120,120,120)35%,rgb(80,80,80)55%,rgb(60,60,60)80%,rgb(40,40,40)100%,transparent)80px 50px;
+}
+
+    @media screen and (max-device-width: 480px) {
+
+        /* //如果使用者之裝置寬度 <= 480px，將會再載入這裡的 CSS。 */
+         .title1,
+    .title2,
+    .title3,
+    .title4,
+    .title5,
+    .title6,
+    .title7,
+    .title8 {
+        font-size: 4.5vh;
+        color: white;
+        width: 9vw;
+        height: 6vh;
+        margin: 4vh 0 0 5vw;
+        padding: 0;
+        font-family: Mamelon;
+    }
+
+    .title1 {
+        background-image: linear-gradient(110deg, rgb(0, 177, 171) 20%, rgb(0, 119, 111) 28%, rgb(0, 119, 111) 40%, rgb(0, 182, 176) 60%, rgb(0, 182, 176),rgb(0, 119, 111)84%,rgb(0, 182, 176)95%);
+        margin-left: 10vw;
+    }
+
+    .title2 {
+        background: linear-gradient(5deg, rgb(254, 116, 25)5%, rgb(254, 116, 25)20%, rgb(255, 60, 0)25%, rgb(254, 116, 25)41%, rgb(255, 60, 0)48%, rgb(254, 116, 25)65%, rgb(255, 60, 0)92%, rgb(254, 116, 25)100%);
+    }
+
+    .title3 {
+        background-color: rgb(0, 159, 92);
+        border-radius:80%;;
+        position: relative;
+        font-size: 4vh;
+        width: 12vw;
+        padding-top:1vh;
+ }
+
+    .title3:before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        left: 30%;
+        background: rgb(0, 159, 92);
+        z-index: -20;
+        border-radius: 100%;
+        width: 5vw;
+        height: 5vw;
+    }
+
+   .title3:after {
+        content: "";
+        position: absolute;
+        top: -5%;
+        left: 5%;
+        background: rgb(0, 159, 92);
+        z-index: -20;
+        border-radius: 100%;
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .title3-copy {
+        background: rgb(0, 159, 92);
+        color: white;
+        width: 5vw;
+        height: 5vw;
+        padding: 0;
+        font-family: Mamelon;
+        border-radius: 100%;
+        position: relative;
+        z-index: -1;
+        top: -105%;
+        left: 55%;
+    }
+
+    .title3-copy::before {
+        content: "";
+        position: absolute;
+        top: 170%;
+        right: 60%;
+        background: rgb(168, 90, 0);
+        z-index: -20;
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .title4 {
+        background: radial-gradient(ellipse at 50% 80%, rgb(230, 15, 94)0%, rgb(230, 15, 94)16%, rgb(254, 82, 140)16%, rgb(254, 82, 140)36%, rgb(230, 15, 94)36%, rgb(230, 15, 94)58%, rgb(254, 82, 140)58%, rgb(254, 82, 140)77%, rgb(230, 15, 94)77%, rgb(230, 15, 94)100%, transparent) -30px -70px;
+    }
+
+    .title5 {
+        background: linear-gradient(-5deg, rgb(2, 168, 254)0%, rgb(2, 168, 254)15%, rgb(0, 137, 235)20%, rgb(0, 137, 235)35%, rgb(2, 168, 254)40%, rgb(2, 168, 254)55%, rgb(0, 137, 235)60%, rgb(0, 137, 235)75%, rgb(2, 168, 254)80%, rgb(2, 168, 254)95%, rgb(0, 137, 235)100%);
+    }
+    .title6{
+        background: linear-gradient(-125deg,rgb(156, 13, 212)0%, rgb(156, 13, 212)19%,rgb(198, 90, 241)45%,rgb(156, 13, 212)50%,rgb(156, 13, 212)58%,rgb(198, 90, 241)60%,rgb(198, 90, 241)63%,rgb(156, 13, 212)72%,rgb(156, 13, 212)82%,rgb(198, 90, 241)85%,rgb(198, 90, 241)100%);
+         margin-left: 25vw;
+    }
+
+.title7{  background: linear-gradient(135deg,rgb(231, 180, 11)0%,rgb(231, 180, 11)25%,rgb(182, 124, 0)25%,rgb(182, 124, 0)40%,rgb(231, 180, 11)60%,rgb(231, 180, 11)75%,rgb(182, 124, 0)75%,rgb(182, 124, 0)100%)}
+
+.title8{ background: radial-gradient(ellipse at 80% 90%,rgb(200,200,200)10%,rgb(120,120,120)35%,rgb(80,80,80)55%,rgb(60,60,60)80%,rgb(40,40,40)100%,transparent)80px 50px;
+}
+    }
+
+h1{
+   text-align: center;
+   color: #d34177;
+   margin-top: 1vh;
+  font-family:"Microsoft JhengHei";
+  font-weight: 800;
+  font-size: 8vh;
+}
+.badge:hover{
+    transform: rotateY(360deg);
+    transition: 0.8s;
+}
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+
+/* 側邊菜單 */
+    .side-menu,
+    .side-menu-small {
+
+        min-height: 100vh;
+        padding: 50px 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 5px 0px 10px hsla(240, 40%, 15%, .6);
+        margin: 0;
+        font-size: 3vh;
+    }
+@media (min-width: 768px){
+
+ .side-menu{
+        background: linear-gradient(180deg, #eba103, #3c39fa);
+    }
+     .side-menu-position{  position: fixed;  width: 260px;}
+}
+
+    .side-menu form {
+        display: flex;
+        margin: 0 10px 50px;
+        border-radius: 100px;
+        border: 1px solid rgb(255, 255, 255, .4);
+    }
+
+    .side-menu form input,
+    .side-menu form button {
+        border: none;
+        background-color: transparent;
+        color: #fff;
+        padding: 5px 10px;
+    }
+
+    .side-menu form input {
+        width: 230px;
+    }
+
+    .side-menu form button {
+        width: 50px;
+    }
+
+    .side-menu form input:focus,
+    .side-menu form button:focus {
+        outline: none;
+    }
+.navbar button{
+        height: 50px;
+    width: 60px;
+     outline: none;
+}
+.navbar span{
+font-size: 35px;
+}
+
+    .nav a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        font-family: 'cute1', sans-serif;
+        font-weight:600;
+    }
+
+   .side-list li {
+        display: block;
+        width: 95%;
+        border-top: 1px solid rgb(255, 255, 255, .4);
+        left: 10px;
+        top: 0;
+    }
+
+    .nav a:hover {
+        color: red;
+    }
+
+    .nav a .fa {
+        margin-right: -0.5em;
+        transform: scale(0);
+        transition: .3s;
+    }
+
+    .nav a:hover .fa {
+        margin-right: 0em;
+        transform: scale(1);
+    }
+
+    .text {
+        margin-top: 55vh;
+    }
+
+    .menu-title {
+        font-size: 2.5vh;
+         }
+    .menu-title a{ color:rgb(102, 255, 0);padding-left: 2vw}
+
+
+  @media screen and (max-device-width: 480px) {
+      #bg-video{ position: absolute;
+        top:18vh;
+        width: 70vw;
+         margin: 12vw;
+        text-align: center;
+    align-items: center;
+    align-self: center;}
+
+
+        .side-menu,
+    .side-menu-small {
+        width: 100%;
+        min-height: 100vh;
+        padding: 50px 0;
+        box-sizing: border-box;
+        float: left;
+        flex-direction: column;
+        box-shadow: 5px 0px 10px hsla(240, 40%, 15%, .6);
+        margin: 0;
+        font-size: 3vh;
+
+    }
+
+    .side-menu{
+        background: #fff;opacity: 0.8;
+    }
+
+    .side-menu form {
+        display: flex;
+        margin: 0 10px 50px;
+        border-radius: 100px;
+        border: 1px solid rgb(255, 255, 255, .4);
+    }
+
+    .side-menu form input,
+    .side-menu form button {
+        border: none;
+        background-color: transparent;
+        color: #fff;
+        padding: 5px 10px;
+    }
+
+    .side-menu form input {
+        width: 230px;
+    }
+
+    .side-menu form button {
+        width: 50px;
+    }
+
+    .side-menu form input:focus,
+    .side-menu form button:focus {
+        outline: none;
+    }
+
+
+    .nav a {
+        display: block;
+        padding: 10px;
+        color: rgb(57, 176, 255);
+        text-decoration: none;
+        position: relative;
+        font-family: 'cute1', sans-serif;
+          font-weight: 600;
+    }
+
+    .nav li {
+        display: block;
+        width: 95%;
+        border-top: 1px solid rgba(46, 46, 46, 0.4);
+        left: 10px;
+        top: 0;
+    }
+
+    .nav a:hover {
+        color: red;
+    }
+
+    .nav a .fa {
+        margin-right: -0.5em;
+        transform: scale(0);
+        transition: .3s;
+    }
+
+    .nav a:hover .fa {
+        margin-right: 0em;
+        transform: scale(1);
+    }
+
+    .text {
+        margin-top: 55vh;
+    }
+
+    .menu-title {
+        font-size: 2.5vh;
+         }
+    .menu-title a{ color:rgb(102, 255, 0);padding-left: 5vw}
+  }
+
+
+
+
+/* 素材相關頁 */
+/* 1. 素材島頁 */
+.island-img{
+    width: auto;
+    height: auto;
+    border-top:2px solid #fff;
+    text-align: center;
+    margin: 0px;
+
+}
+.island-img h3{
+    margin-top: 10px;
+    color:rgb(54, 5, 46);  font-family: 'wt011';
+    font-size: 7vh;
+}
+.island-img p{
+    font-family: 'cwTeXYen';
+    font-size: 3.5vh;
+    color: rgb(5,173,122)
+}
+.island-img img{
+    height: 30vh;
+}
+@media screen and (max-device-width: 480px) {
+.island-img img{
+    height: 20vh;
+}
+}
+
+.follow-menu{
+    position: fixed;
+    right: 0;
+    bottom: 10vh;
+    background-color: rgba(75, 168, 255, 0.842);
+    width:12vw;
+    height:21vh;
+    border-radius: 30px 0px 0px 30px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.follow-menu ol{margin: 0;
+text-decoration-style: dotted;
+}
+.follow-menu li{
+     font-family: 'fantasy';
+    font-size: 2.3vh;
+    font-weight: 800;
+    margin-left: 5px;
+    padding: 0;
+}
+.follow-menu a{
+    color: black;
+    text-decoration: none;
+}
+.img-example{
+    position: fixed;
+    right: 0;
+    bottom: 50vh;
+    background-color: rgba(91, 252, 139, 0.842);
+    width:8vw;
+    height:12vh;
+    border-radius: 10px 0px 0px 10px;
+       font-size: 2vh;
+}
+@media screen and (max-device-width: 480px) {
+.img-example{
+    width:10vw;
+    height:10vh; font-size: 1vh;
+}
+}
+
+#top +h5{
+    text-align: end;
+    padding-right: 1vw;
+    color:rgb(255,0,0)
+}
+
+/* 蟲、魚圖鑑頁 */
+.earth{text-align: center; font-family: 'cwTeXYen';}
+.earth1{
+display:inline-block;margin: 2vw}
+.earth2{
+ display: inline-block;margin:2vw;
+}
+.earth1,.earth2 h4{cursor: pointer}
+
+.table-month,.flower-list-fliter{
+background: transparent;
+display: flex;
+  justify-content: center;
+margin-left:auto;
+margin-right:auto;
+text-align:center
+}
+.table-month tr,td{
+ border:2px solid rgb(255, 255, 255);
+}
+
+.table-month a{
+    text-decoration: none;
+    color:rgb(255, 40, 111);
+}
+
+.table-list{
+    width:90%;
+    margin-left:auto;
+margin-right:auto;
+}
+@media screen and (max-device-width: 480px) {
+
+.table-list{
+    width:100%;
+margin: 0;
+padding: 0;
+}
+.div-padding{
+    padding: 0;
+}
+.fish img{width: 15vw;
+}
+
+}
+
+ .thead-light th, .table-body td{
+    border:2px solid #000;
+}
+.table-body td{
+vertical-align: middle;
+}
+
+
+/* 回到頁首 */
+ /* 40px */
+        .toTop-arrow {
+            width: 2.8rem;
+            height: 2.5rem;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            border-radius: 33%;
+            opacity: 0.6;
+            background: #000;
+            cursor: pointer;
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+
+        }
+
+        .toTop-arrow::before,
+        .toTop-arrow::after {
+            width: 23px;
+            height: 5px;
+            border-radius: 3px;
+            background: #f90;
+            position: absolute;
+            content: "";
+        }
+
+        .toTop-arrow::before {
+            transform: rotate(-45deg) translate(0, -50%);
+            left: 0.3rem;
+        }
+
+        .toTop-arrow::after {
+            transform: rotate(45deg) translate(0, -50%);
+            right: 0.3rem;
+        }
+
+        .toTop-arrow:focus {
+            outline: none;
+        }
+
+
+
+/* 家具頁 */
+.table-furniture{
+    /* width: 25vw;
+ margin:2vh auto 10vh auto ; */
+ text-align: center;
+ position: fixed;
+    right: 0;
+    top: 30vh;
+    background: rgb(18, 128, 255);
+    border-radius: 10px;
+    width: 10vw;
+}
+
+.table-furniture li{
+     display: block;margin: auto
+        }
+ .table-furniture a{color:rgb(243, 227, 197)}
+
+@media screen and (max-device-width: 480px) {
+.table-furniture{
+     width: 27vw;
+ margin:2vh auto 10vh auto ;
+ text-align: center;
+ position: fixed;
+    right: 0;
+    top: 3vh;
+    background: rgb(18, 128, 255);
+    border-radius: 10px
+}#Furniture{margin-top: 10vh}
+}
+
+
+
+@media screen and (max-device-width: 380px) {
+.table-furniture{
+     width: 30vw;
+}
+}
+
+
+.correct-furniture{text-align: center;
+border-top: rgb(243, 227, 197) 2px solid;
+padding-top: 2vh;
+}
+
+.correct-furniture img{
+    width: 60vw;
+    height: auto;
+}
+
+.correct-furniture p{margin:2vh 0 10vh 8vw;width:80%;font-size: 3vh;}
+
+.furniture-list-p{ font-size:3vh;width: 60%;text-align: center;margin: auto}
+
+/* 花圖鑑頁 */
+.flower-div {
+    border-top: 2px solid #fff;
+    margin:8vh 0 5vh;
+    padding-top: 2vh
+}
+.flower-div h3{font-family:"wt014"}
+
+.flower-list-fliter img{
+    width: 4vw;
+}
+
+ .flower-list{ width:90%;
+    margin-left:auto;
+margin-right:auto;
+}
+
+.flower-list td{
+border: 1px solid rgb(20,180,120);
+vertical-align: inherit}
+.flower-list th{
+    width: 30%;border: 1px solid rgb(20,180,120);
+}
+
+
+/* 活動頁 */
+.event{
+    text-align: center;
+}
+.event img{
+ width: 60vw;
+    height: auto;
+}
+
+.event p{font-size: 3vh;margin-bottom: 15vh;}
