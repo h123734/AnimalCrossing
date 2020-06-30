@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!--@media all and (max-width: 980px){...}
+使用的方式是 @-rule 的作法，也就是說，後面除了加上裝置類型之外，還可以額外增加一些條件。可以使用的條件還頗多的，
+
+width, height, with max/min prefix
+定義寬度與高度，可定義範圍
+device-width, device-height with max/min prefix
+定義__裝置__的高度與寬度，可定義範圍
+orientation
+裝置旋轉方向
+aspect-ratio, device-aspect-ratio with max/min prefix
+螢幕與裝置顯示比例，可定義範圍
+color with max/min prefix
+顏色的 bit 數，如果不是彩色裝置則會是 0
+color-index with max/min prefix
+索引色專用，就是在色彩對應表（Color lookup table）中的顏色數
+monochrome with max/min prefix
+單色（灰階）裝置專用，不是單色（灰階）裝置就會返回 0
+resolution with max/min prefix
+定義解析度，可定義範圍
+scan applies tv media types only
+tv 專用設定，掃描的種類
+grid
+這跟 Media Group 有關-->
+</head>
+
+<body class="">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-12 col-md-2 p-0 m-0">
+                <nav class="navbar m-0 p-0 side-menu-position">
+                    <button class="navbar-toggler bg-primary" type="button" data-toggle="collapse" data-target="#demo">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="side-menu wrap collapse navbar-collapse" id="demo">
+                        <!-- <form>
+                                                                                                                                        <input type="search" placeholder="請輸入關鍵字">
+                                                                                                                                        <button><i class="fa fa-search"></i></button>
+                                                                                                                                    </form> -->
+                        <ul class="nav side-list">
+                            <li class="">
+                                <a href="#" data-target="#stuff" data-toggle="collapse" class="dropdown-toggle">
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i> 動植物與素材</a>
+                                <ul class="collapse menu-title " id="stuff">
+                                    <li class=""><a href="./stuff-island.html" target="_parent">素材島</a></li>
+                                    <li class=""><a href="./bug-list.html">蟲</a></li>
+                                    <li class=""><a href="./fish-list.html">魚</a></li>
+                                    <li class=""><a href="./flower.html">花</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" data-target="#furniture" data-toggle="collapse" class="dropdown-toggle">
+                                    <i class="fa fa-home" aria-hidden="true"></i> 房屋布置
+                                </a>
+                                <ul class="collapse menu-title" id="furniture">
+                                    <li class=""><a href="./Furniture.html">家具獲得方式</a></li>
+                                    <li class=""><a href="./Furniture-list.html">家具列表</a></li>
+                                </ul>
+                            </li>
+                            <li> <a href="#">
+                                    <i class="fa fa-book" aria-hidden="true"></i> 各種攻略
+                                </a></li>
+                            <li> <a href="#">
+                                    <i class="fa fa-database" aria-hidden="true"></i> DIY表
+                                </a></li>
+                            <li>
+                                <a href="#" data-target="#activite" data-toggle="collapse" class="dropdown-toggle">
+                                    <i class="fa fa-globe" aria-hidden="true"></i> 活動
+                                </a>
+                                <ul class="collapse menu-title" id="activite">
+                                    <li class=""><a href="./june-bride.html">6月新娘</a></li>
+                                </ul>
+                            </li>
+                            <li> <a href="#">
+                                    <i class="fa fa-users" aria-hidden="true"></i> 島民介紹
+                                </a> </li>
+                            <li> <a href="#">
+                                    <i class="fa fa-credit-card" aria-hidden="true"></i> 價格
+                                </a></li>
+                            <li> <a href="#">
+                                    <i class="fa fa-magnet" aria-hidden="true"></i> 好用的外部工具
+                                </a></li>
+                            <li> <a href="#">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 島主日記
+                                </a></li>
+                            <li> <a href="#">
+                                    <i class="fa fa-picture-o" aria-hidden="true"> </i> 有趣圖文分享
+                                </a></li>
+                            <li> <a href="./index.html">
+                                    <i class="fa fa-picture-o" aria-hidden="true"> </i> 回首頁
+                                </a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-12 col-md-10">
+                <h1 class="text-center todo-title">每日需做清單</h1>
+                <div class=" table-todo">
+                    <ul class="nav">
+                        <li class="" style="border:none;padding-left: 0">
+                            <a href="#" data-target="#todo" data-toggle="collapse" class="dropdown-toggle text-center"
+                                style="padding-left: 5px">
+                                <i class="fa fa-leaf text-center" aria-hidden="true"></i> 每日清單</a>
+                            <ul class="collapse " id="todo">
+                                <li class=""><a href="#title-knockstone">挖礦石</a></li>
+                                <li class=""><a href="#title-shaketree">搖樹拿家具/拿黃蜂/撿瓶中信</a></li>
+                                <li class=""><a href="#title-digging">挖化石鑑定</a></li>
+                                <li class=""><a href="#title-shopping">買商店/服飾店的產品</a></li>
+                                <li class=""><a href="#title-dailymission">每天的Nook集哩遊+任務</a></li>
+                                <li class=""><a href="#title-login">登入貍端機</a></li>
+
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="todo-list">
+                    <h2 id="title-knockstone">挖礦石</h2><img src="./img/matome/todo1.jpg" alt="">
+                    <p class="">
+                        每日可以敲擊島上的石頭，島上石頭共有5顆(如果沒敲爆的話)，每顆石頭最多可敲8次，請注意要拿"鏟子"敲，敲的方法可像上圖一樣，在石頭的周圍8格之外，先挖3個連續的洞，然後人物角色站在石頭與洞的縫隙間敲擊石頭，洞可以防止敲擊的後座力太大，要是後座力太大，人物會被反彈到較遠的距離而無法連續敲擊，這樣就敲不到8次了...
+                    </p>
+                </div>
+                <div class="todo-list">
+                    <h2 id="title-shaketree">搖樹拿家具/拿黃蜂/撿瓶中信</h2>
+                    <p class="text-center">
+                        島上的樹，每天固定會生出5個蜂巢、2件家具，還有到海邊沙灘上巡巡，每天固定會飄來1個瓶中信，樹的話，島主我建議可以把普通的樹(普通闊葉或針葉)砍光剩7顆就好，其餘都留果樹，會生水果的樹是不會長蜂巢或家具的，這樣就不用賭運氣看搖樹會掉甚麼了
+                    </p>
+                </div>
+                <div class="todo-list">
+                    <h2 id="title-digging">挖礦石鑑定</h2><img src="./img/matome/todo2.jpg" alt="">
+                    <p class="">每天都可以有新的化石可挖，一般正常是每天4個化石，如果你前一天沒有挖的話，下一次上線會變成6個，然後...最多就是6個了不會再累加，所以每天化石要記得挖
+                    </p>
+                </div>
+                <div class="todo-list">
+                    <h2 id="title-shopping">買商店/服飾店的產品</h2>
+                    <p class="">每天商店以及服飾店的商品會更新，由於是每天更新，所以島主建議每天去逛逛，看看有沒有新東西可以購買
+                    </p>
+                </div>
+                <div class="todo-list">
+                    <h2 id="title-dailymission">每天的Nook集哩遊+任務</h2>
+                    <p class="">每天都有新的任務可以解，最前面5個還是有加倍的，可以好好把握這個賺哩數的機會
+                    </p>
+                </div>
+                <div class="todo-list">
+                    <h2 id="title-login">登入貍端機</h2>
+                    <p class="">這個算是島主一個小小的私心建議，因為我實在太常忘記去登入了，很常重算又從每天50點開始拿起，
+                        <table style="margin:auto">
+                            <tr>
+                                <td> 第1天領取：50哩數</td>
+                            </tr>
+                            <tr>
+                                <td> 連續2天領取：80哩數</td>
+                            </tr>
+                            <tr>
+                                <td> 連續3天領取：100哩數</td>
+                            </tr>
+                            <tr>
+                                <td> 連續4天領取：150哩數</td>
+                            </tr>
+                            <tr>
+                                <td> 連續5天領取：200哩數</td>
+                            </tr>
+                            <tr>
+                                <td> 連續6天領取：250哩數</td>
+                            </tr>
+                            <tr>
+                                <td> 連續7天或以上領取：300哩數</td>
+                            </tr>
+
+                        </table>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>
