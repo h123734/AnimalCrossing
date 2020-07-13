@@ -57,7 +57,7 @@ padding-bottom: 1vh;
         align-items: center;
         align-self: center;
     }
-#draggable {width:18vw; padding: 0.5em;bottom:20vh; left:80vw;
+#draggable {width:18vw; padding: 0.5em;bottom:20vh; left:70vw;
 background: transparent;border: none;cursor: pointer;
 }
 #draggable img:hover {transform: rotateY(180deg)}
@@ -65,6 +65,7 @@ background: transparent;border: none;cursor: pointer;
 {
 width:5vw;
 }
+
 .shizue{
 padding:0 10px 0 10px ;
 position: absolute;
@@ -78,6 +79,8 @@ top:10%;
 font-family: 'cute2';
 font-size: 3vh;
 }
+.heartBeat{animation-iteration-count: infinite}
+
 @media all and (max-width: 480px){
     #draggable {display: none}
 
