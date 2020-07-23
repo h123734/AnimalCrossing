@@ -1,5 +1,5 @@
 
-    @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+    /* @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap"); */
     @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
 
     @font-face {
@@ -14,12 +14,16 @@
         src: url(./font/wt014.ttf)}
          @font-face {
         font-family: cwTeXYen;
-        src: url(./font/cwTeXYen-zhonly.ttf)}
+        src: url(./font/cwTeXYen-zhonly.ttf);
+        font-display:swap;
+    }
         @font-face{font-family: cute1;
-        src: url(./font/清松手寫體1.ttf)
+        src: url(./font/chingsung1.ttf);
+        font-display:swap;
         }
           @font-face{font-family: cute2;
-        src: url(./font/清松手寫體3.ttf)
+        src: url(./font/chingsung3.ttf);
+         font-display:swap;
         }
 
 
@@ -100,7 +104,7 @@ font-size: 3vh;
         height: 10vh;
         margin-top: 4vh;
         padding: 0;
-        font-family: Mamelon;
+        font-family: Mamelon,sans-serif;
     }
 
     .title1 {
@@ -148,7 +152,7 @@ font-size: 3vh;
         width: 48px;
         height: 48px;
         padding: 0;
-        font-family: Mamelon;
+        font-family: Mamelon,sans-serif;
         border-radius: 100%;
         position: relative;
         z-index: -1;
@@ -200,7 +204,7 @@ font-size: 3vh;
         height: 6vh;
         margin: 4vh 0 0 5vw;
         padding: 0;
-        font-family: Mamelon;
+        font-family: Mamelon,sans-serif;
     }
 
     .title1 {
@@ -251,7 +255,7 @@ font-size: 3vh;
         width: 5vw;
         height: 5vw;
         padding: 0;
-        font-family: Mamelon;
+        font-family: Mamelon,sans-serif;
         border-radius: 100%;
         position: relative;
         z-index: -1;
