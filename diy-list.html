@@ -9,7 +9,46 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            var dataurl = "./rd47q-z1ecd.json";
+            $.ajax({
+                url: dataurl,
+                type: 'GET',
+                success: function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        $("#tableshow").append
+                            (
+                                "<tr class='diylist " + data[i].id + "'>" +
+                                "<td>" + data[i].type + "</td>" +
+                                "<td>" + data[i].name + "</td>" +
+                                "</tr>"
+                            );
+                    }
+                },
+            });
+
+            $("a[class='diy-type']").on('click touchstart', function () {
+                var e = $(this).attr('id');
+                $(".diylist").show();
+                $(".diylist").hide();
+                $("." + e).show();
+                return false;
+            })
+        })
+
+    </script>
 
     <!--@media all and (max-width: 980px){...}
 使用的方式是 @-rule 的作法，也就是說，後面除了加上裝置類型之外，還可以額外增加一些條件。可以使用的條件還頗多的，
@@ -70,9 +109,13 @@ grid
                                     <li class=""><a href="./Furniture-list.html">家具列表</a></li>
                                 </ul>
                             </li>
-                            <li> <a href="#">
+                            <li> <a href="#" data-target="#guide" data-toggle="collapse" class="dropdown-toggle">
                                     <i class="fa fa-book" aria-hidden="true"></i> 各種攻略
-                                </a></li>
+                                </a>
+                                <ul class="collapse menu-title" id="guide">
+                                    <li class=""><a href="./daily-todo.html">每日需做清單</a></li>
+                                </ul>
+                            </li>
                             <li> <a href="./diy-list.html">
                                     <i class="fa fa-database" aria-hidden="true"></i> DIY表
                                 </a></li>
@@ -107,95 +150,64 @@ grid
                 </nav>
             </div>
             <div class="col-12 col-md-10">
-                <h1 class="text-center todo-title">每日需做清單</h1>
-                <div class=" table-todo">
-                    <ul class="nav">
-                        <li class="" style="border:none;padding-left: 0">
-                            <a href="#" data-target="#todo" data-toggle="collapse" class="dropdown-toggle text-center"
-                                style="padding-left: 5px">
-                                <i class="fa fa-leaf text-center" aria-hidden="true"></i> 每日清單</a>
-                            <ul class="collapse " id="todo">
-                                <li class=""><a href="#title-knockstone">挖礦石</a></li>
-                                <li class=""><a href="#title-shaketree">搖樹拿家具/拿黃蜂/撿瓶中信</a></li>
-                                <li class=""><a href="#title-digging">挖化石鑑定</a></li>
-                                <li class=""><a href="#title-shopping">買商店/服飾店的產品</a></li>
-                                <li class=""><a href="#title-dailymission">每天的Nook集哩遊+任務</a></li>
-                                <li class=""><a href="#title-login">登入貍端機</a></li>
-
-
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="todo-list">
-                    <h2 id="title-knockstone">挖礦石</h2><img src="./img/matome/todo1.jpg" alt="">
-                    <p class="">
-                        每日可以敲擊島上的石頭，島上石頭共有5顆(如果沒敲爆的話)，每顆石頭最多可敲8次，請注意要拿"鏟子"敲，敲的方法可像上圖一樣，在石頭的周圍8格之外，先挖3個連續的洞，然後人物角色站在石頭與洞的縫隙間敲擊石頭，洞可以防止敲擊的後座力太大，要是後座力太大，人物會被反彈到較遠的距離而無法連續敲擊，這樣就敲不到8次了...
-                    </p>
-                </div>
-                <div class="todo-list">
-                    <h2 id="title-shaketree">搖樹拿家具/拿黃蜂/撿瓶中信</h2><img src="./img/matome/todo4.jpg" alt="">
-                    <img src="./img/matome/todo5.jpg" alt="">
-                    <p class="text-center">
-                        島上的樹，每天固定會生出5個蜂巢、2件家具，還有到海邊沙灘上巡巡，每天固定會飄來1個瓶中信，樹的話，島主我建議可以把普通的樹(普通闊葉或針葉)砍光剩7顆就好，其餘都留果樹，會生水果的樹是不會長蜂巢或家具的，這樣就不用賭運氣看搖樹會掉甚麼了
-                    </p>
-                </div>
-                <div class="todo-list">
-                    <h2 id="title-digging">挖礦石鑑定</h2><img src="./img/matome/todo2.jpg" alt="">
-                    <p class="">每天都可以有新的化石可挖，一般正常是每天4個化石，如果你前一天沒有挖的話，下一次上線會變成6個，然後...最多就是6個了不會再累加，所以每天化石要記得挖
-                    </p>
-                </div>
-                <div class="todo-list">
-                    <h2 id="title-shopping">買商店/服飾店的產品</h2><img src="./img/matome/todo3.jpg" alt=""><img
-                        src="./img/matome/todo6.jpg" alt="">
-                    <p class="">每天商店以及服飾店的商品會更新，由於是每天更新，所以島主建議每天去逛逛，看看有沒有新東西可以購買
-                    </p>
-                </div>
-                <div class="todo-list">
-                    <h2 id="title-dailymission">每天的Nook集哩遊+任務</h2><img src="./img/matome/todo7.jpg" alt="">
-                    <p class="">每天都有新的任務可以解，最前面5個還是有加倍的，可以好好把握這個賺哩數的機會
-                    </p>
-                </div>
-                <div class="todo-list">
-                    <h2 id="title-login">登入貍端機</h2>
-                    <p class="">這個算是島主一個小小的私心建議，因為我實在太常忘記去登入了，很常重算又從每天50點開始拿起，
-                        <table style="margin:auto">
+                <div class="nav">
+                    <a data-target="#table-diytype" data-toggle="collapse"
+                        class="dropdown-toggle diy-button text-center">
+                        <h4 class="text-center text-info bg-warning">依種類排</h4>
+                    </a>
+                    <table class="table table-light collapse bg-secondary" id="table-diytype">
+                        <tbody>
                             <tr>
-                                <td> 第1天領取：50哩數</td>
+                                <td><a href="" class="diy-type" id="tool"> 工具</a></td>
+                                <td><a href="" class="diy-type" id="wood"> 木製類</a></td>
+                                <td><a href="" class="diy-type" id="wood-a"> 木製雜物</a></td>
+                                <td><a href="" class="diy-type" id="fruit">水果類</a></td>
                             </tr>
                             <tr>
-                                <td> 連續2天領取：80哩數</td>
+                                <td><a href="" class="diy-type" id="stone"> 石頭類</a></td>
+                                <td><a href="" class="diy-type" id="bamboo"> 竹製品</a></td>
+                                <td><a href="" class="diy-type" id="shell"> 貝殼類</a></td>
+                                <td><a href="" class="diy-type" id="miles"> 里程兌換</a></td>
                             </tr>
                             <tr>
-                                <td> 連續3天領取：100哩數</td>
+                                <td><a href="" class="diy-type" id="garbage"> 垃圾類</a></td>
+                                <td><a href="" class="diy-type" id="flower"> 花朵類</a></td>
+                                <td><a href="" class="diy-type" id="sister"> 星星妹</a></td>
+                                <td><a href="" class="diy-type" id="wedding"> 婚禮</a></td>
                             </tr>
                             <tr>
-                                <td> 連續4天領取：150哩數</td>
+                                <td><a href="" class="diy-type" id="summer">夏天</a></td>
+                                <td><a href="" class="diy-type" id="fall">秋天</a></td>
+                                <td><a href="" class="diy-type" id="winter">冬天</a></td>
+                                <td><a href="" class="diy-type" id="goldtool">黃金工具</a></td>
                             </tr>
                             <tr>
-                                <td> 連續5天領取：200哩數</td>
+                                <td><a href="" class="diy-type" id="gold">黃金類</a></td>
+                                <td><a href="" class="diy-type" id="dirt"> 黏土類</a></td>
+                                <td><a href="" class="diy-type" id="stuff">雜物類 </a></td>
+                                <td><a href="" class="diy-type" id="grass">雜草類 </a></td>
                             </tr>
                             <tr>
-                                <td> 連續6天領取：250哩數</td>
+                                <td><a href="" class="diy-type" id="mashroom"> 蘑菇類</a></td>
+                                <td><a href="" class="diy-type" id="sakura">櫻花</a></td>
+                                <td><a href="" class="diy-type" id="steel"> 鐵製品</a></td>
+                                <td><a href="" class="diy-type" id="easter"> 復活節</a></td>
                             </tr>
-                            <tr>
-                                <td> 連續7天或以上領取：300哩數</td>
-                            </tr>
-
-                        </table>
-                    </p>
+                        </tbody>
+                    </table>
                 </div>
+                <table class="table table-light text-center diy-table" id="tableshow">
+                    <tr>
+                        <th>類別</th>
+                        <th>名稱</th>
+                    </tr>
+                </table>
             </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-            <!-- Optional JavaScript -->
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                crossorigin="anonymous"></script>
 </body>
 
 </html>
